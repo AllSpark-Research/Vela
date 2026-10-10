@@ -6,7 +6,7 @@ The Vela framework turns anonymized real-world behavior histories into training 
 
 This repository provides **74 selected task templates** from Vela, organized into four question types. The templates describe how to construct questions, define the available evidence, and evaluate answers.
 
-![Vela framework](assets/framework.png)
+[![Vela framework](assets/framework.png)](assets/framework.pdf)
 
 *Vela converts behavior histories into tasks, selects useful training examples, and builds training trajectories.*
 
