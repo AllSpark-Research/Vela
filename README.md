@@ -1,6 +1,11 @@
-# Vela: User Behavior as Supervision Sparks LLM Intelligence
-
-[Paper (PDF)](Vela.pdf)
+<div align="center">
+  <h1>Vela: User Behavior as Supervision Sparks LLM Intelligence</h1>
+  <p>
+    <a href="Vela.pdf"><img src="assets/badges/paper.svg" alt="Paper PDF" /></a>
+    <a href="https://github.com/AllSpark-Research/Vela"><img src="assets/badges/github.svg" alt="GitHub repository" /></a>
+    <img src="assets/badges/arxiv.svg" alt="arXiv: coming soon" title="arXiv link coming soon" />
+  </p>
+</div>
 
 Vela explores **user behavior as supervision**: learning from anonymized records of what users actually do to improve how large language models understand individual preferences, intent, and behavior over time.
 
