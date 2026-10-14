@@ -1,13 +1,144 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Vela learns from anonymized real-world user behavior to improve user understanding and general LLM capabilities."><meta name="theme-color" content="#f7faff"><title>Vela — User Behavior as Supervision</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Official Vela research from AllSpark at Xiaohongshu: learning from anonymized user behavior to improve LLM intelligence. Paper, task templates, and prompts."><meta name="theme-color" content="#f7faff"><title>Vela: User Behavior as Supervision Sparks LLM Intelligence | AllSpark Research</title>
 <link rel="canonical" href="https://allspark-research.github.io/Vela/">
 <link rel="icon" href="assets/allspark-mark.svg" type="image/svg+xml">
 <meta property="og:title" content="Vela: User Behavior as Supervision Sparks LLM Intelligence">
-<meta property="og:description" content="Learning from real-world user behavior to improve user understanding and general LLM capabilities.">
+<meta property="og:description" content="Official Vela research from AllSpark at Xiaohongshu: learning from anonymized user behavior to improve LLM intelligence. Paper, task templates, and prompts.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://allspark-research.github.io/Vela/">
 <meta property="og:image" content="https://allspark-research.github.io/Vela/assets/teaser.png">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vela: User Behavior as Supervision Sparks LLM Intelligence">
+<meta name="twitter:description" content="Official Vela research from AllSpark at Xiaohongshu: learning from anonymized user behavior to improve LLM intelligence. Paper, task templates, and prompts.">
+<meta name="twitter:image" content="https://allspark-research.github.io/Vela/assets/teaser.png">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="sitemap" type="application/xml" href="https://allspark-research.github.io/Vela/sitemap.xml">
+<meta name="citation_title" content="Vela: User Behavior as Supervision Sparks LLM Intelligence">
+<meta name="citation_author" content="Yang Xiao">
+<meta name="citation_author" content="Yusong Sun">
+<meta name="citation_author" content="Haoyi Wu">
+<meta name="citation_author" content="Wenyang Hui">
+<meta name="citation_author" content="Weiqiang Hang">
+<meta name="citation_author" content="Luqing Wang">
+<meta name="citation_author" content="Zejian Wang">
+<meta name="citation_author" content="Zirui Tu">
+<meta name="citation_author" content="Jingsheng Mao">
+<meta name="citation_author" content="Shaobo Hu">
+<meta name="citation_author" content="Yang Luo">
+<meta name="citation_author" content="Jiale Guo">
+<meta name="citation_author" content="Jin Zhang">
+<meta name="citation_author" content="Yudan Liu">
+<meta name="citation_author" content="Zhaokai Luo">
+<meta name="citation_author" content="Ren Huan">
+<meta name="citation_author" content="Yao Hu">
+<meta name="citation_author" content="Chengyue Jiang">
+<meta name="citation_author" content="Wenjie Li">
+<meta name="citation_author" content="Chuan Mu">
+<meta name="citation_publication_date" content="2026">
+<meta name="citation_pdf_url" content="https://allspark-research.github.io/Vela/assets/Vela.pdf">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": "Vela: User Behavior as Supervision Sparks LLM Intelligence",
+  "name": "Vela: User Behavior as Supervision Sparks LLM Intelligence",
+  "url": "https://allspark-research.github.io/Vela/paper.html",
+  "description": "Large language models are increasingly deployed in real-world applications, from personal assistants that take actions based on users' long-term behavior histories to recommendation and advertising systems that predict what users will do. These applications demand the user dimension of LLM intelligence: the ability to infer a person's preferences, intent, and likely future actions from weeks to years of user behavior data. Yet current models remain limited in this user dimension of intelligence: they are trained on static text or synthetic data, neither of which captures how user behavior evolves over time. Real-world user behavior data, by contrast, is already available at scale on content platforms and in personal-assistant agents. These records capture sequences of user actions, making the user's actual behavior a natural supervisory signal with the potential to improve LLM intelligence. To this end, we propose user behavior as supervision, a paradigm in which the training signal for LLMs comes from the user's real behavior in content platforms. We further introduce Vela, a framework that operationalizes this paradigm by converting real user behavior data into trainable tasks and trajectories. From the anonymized behavior records of 100,000 users, Vela generates 100,000 tasks across 91 real-world task templates. Difficulty-based filtering and trajectory acceptance criteria jointly retain approximately 75,000 tasks with selected training trajectories. Fine-tuning Qwen3.6-35B-A3B on these training trajectories improves performance over the base model by up to 11.5 points on user-related tasks and by an average of 4 points on general benchmarks. Scaling experiments further show that training on more user behavior data improves user-related performance. Reinforcement learning after fine-tuning outperforms reinforcement learning from the base model by up to 7.7 points on user-related tasks. These gains suggest that using real-world user behavior as supervision can improve not only user-centered capabilities but also the broader intelligence of LLMs.",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yang Xiao"
+    },
+    {
+      "@type": "Person",
+      "name": "Yusong Sun"
+    },
+    {
+      "@type": "Person",
+      "name": "Haoyi Wu"
+    },
+    {
+      "@type": "Person",
+      "name": "Wenyang Hui"
+    },
+    {
+      "@type": "Person",
+      "name": "Weiqiang Hang"
+    },
+    {
+      "@type": "Person",
+      "name": "Luqing Wang"
+    },
+    {
+      "@type": "Person",
+      "name": "Zejian Wang"
+    },
+    {
+      "@type": "Person",
+      "name": "Zirui Tu"
+    },
+    {
+      "@type": "Person",
+      "name": "Jingsheng Mao"
+    },
+    {
+      "@type": "Person",
+      "name": "Shaobo Hu"
+    },
+    {
+      "@type": "Person",
+      "name": "Yang Luo"
+    },
+    {
+      "@type": "Person",
+      "name": "Jiale Guo"
+    },
+    {
+      "@type": "Person",
+      "name": "Jin Zhang"
+    },
+    {
+      "@type": "Person",
+      "name": "Yudan Liu"
+    },
+    {
+      "@type": "Person",
+      "name": "Zhaokai Luo"
+    },
+    {
+      "@type": "Person",
+      "name": "Ren Huan"
+    },
+    {
+      "@type": "Person",
+      "name": "Yao Hu"
+    },
+    {
+      "@type": "Person",
+      "name": "Chengyue Jiang"
+    },
+    {
+      "@type": "Person",
+      "name": "Wenjie Li"
+    },
+    {
+      "@type": "Person",
+      "name": "Chuan Mu"
+    }
+  ],
+  "isAccessibleForFree": true,
+  "inLanguage": "en",
+  "sameAs": [
+    "https://www.alphaxiv.org/abs/2610.vela-user-behavior-supervision",
+    "https://github.com/AllSpark-Research/Vela"
+  ],
+  "encoding": {
+    "@type": "MediaObject",
+    "contentUrl": "https://allspark-research.github.io/Vela/assets/Vela.pdf",
+    "encodingFormat": "application/pdf"
+  }
+}
+</script>
 <style>
 @font-face{font-family:Outfit;src:url('assets/Outfit-Regular.ttf') format('truetype');font-weight:400;font-display:swap}@font-face{font-family:Outfit;src:url('assets/Outfit-SemiBold.ttf') format('truetype');font-weight:600;font-display:swap}
 :root{--blue:#285eee;--ink:#152a49;--muted:#63738b;--teal:#008d88;--line:#d9e3f2;--pale:#f1f6ff;--white:#fff}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;color:var(--ink);font-family:Outfit,system-ui,sans-serif;font-size:18px;line-height:1.65;background:#fff}a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}button{font:inherit;cursor:pointer}button,a{-webkit-tap-highlight-color:transparent}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #00aaa0;outline-offset:5px}button:disabled{cursor:default}nav{height:76px;background:rgba(255,255,255,.96);border-bottom:1px solid #e8eef7;position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:0 max(5vw,24px)}.wordmark{font-size:30px;font-weight:600;color:var(--blue);letter-spacing:-1.7px}.navlinks{display:flex;gap:30px;font-size:15px}.navlinks a{color:#50617b}.navlinks a:last-child{color:var(--blue)}.hero{position:relative;overflow:hidden;text-align:center;background:linear-gradient(180deg,#f7faff 0%,#edf4ff 64%,#fff 100%);padding:72px 24px 52px}.hero:before{content:'';position:absolute;width:720px;height:720px;left:calc(50% - 360px);top:-305px;background:radial-gradient(ellipse,#d3e2ff60,transparent 68%);pointer-events:none}.hero>*{position:relative}.hero-logo{font-size:clamp(84px,13vw,150px);line-height:1;font-weight:600;letter-spacing:-.08em;color:var(--blue);margin:0 0 28px}.hero h1{font-size:clamp(30px,4vw,51px);line-height:1.17;font-weight:600;letter-spacing:-1.65px;margin:0 auto;max-width:1000px}.hero h1 span{display:block}.hero .deck{max-width:750px;margin:26px auto 24px;font-size:21px;line-height:1.55;color:#566982}.authors{font-size:17px;margin:0}.author-detail{display:inline-block;font-size:14px;color:var(--muted);max-width:880px;margin:9px auto}.author-detail summary{cursor:pointer;list-style:none;text-decoration:underline;text-underline-offset:4px}.author-detail p{margin:12px 0;line-height:1.65}.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:25px}.action{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:47px;padding:8px 22px;border:1px solid var(--line);border-radius:28px;background:white;color:var(--ink);font-size:16px}.action.primary{background:var(--blue);color:white;border-color:var(--blue)}.action svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8}.action:hover{text-decoration:none;box-shadow:0 4px 18px #285eee16}.hero .small{font-size:13px;color:var(--muted);margin-top:16px}.wrap{max-width:1140px;margin:0 auto;padding:0 30px}.evidence{display:flex;justify-content:center;gap:0;margin:24px auto 14px;max-width:970px}.evidence>div{flex:1;padding:10px 28px}.evidence strong{display:block;font-size:48px;line-height:1.15;font-weight:600;letter-spacing:-1.5px;color:var(--blue)}.evidence span{display:block;color:var(--muted);font-size:15px;margin-top:8px}.evidence-note{font-size:13px;color:var(--muted);text-align:center}.section{padding:77px 0;border-top:1px solid #e7edf6}.section:first-of-type{border-top:0}h2{font-weight:600;line-height:1.2;letter-spacing:-.9px;font-size:36px;margin:0 0 22px}h3{font-weight:600;font-size:23px;line-height:1.3;margin:0 0 14px}.prose{max-width:795px}.prose p{margin:0 0 18px}.intro-layout{display:grid;grid-template-columns:.85fr 1.5fr;gap:75px}.intro-layout p{color:#52647d;margin-top:0}.image-button{display:block;padding:0;width:100%;border:0;background:transparent}.image-button img{width:100%;height:auto;display:block}.figure{margin:31px 0 0}figcaption{font-size:14px;color:var(--muted);text-align:center;line-height:1.5;margin-top:14px}.zoom-note{color:var(--blue);font-size:13px}.method-line{display:flex;margin:38px 0 0;gap:36px}.method-line>div{flex:1;border-top:2px solid var(--line);padding-top:17px}.method-line strong{color:var(--blue);font-size:14px}.method-line h3{font-size:21px;margin:6px 0}.method-line p{font-size:15px;color:#64738a;line-height:1.55;margin:0}.example-bg{background:#f7faff}.example-head{max-width:780px}.example{display:grid;grid-template-columns:1fr 1.22fr;margin-top:38px;border:1px solid #cfddf3;border-radius:16px;overflow:hidden;background:white}.history{padding:32px;border-right:1px solid #d9e3f2}.history h3{font-size:20px}.history-label{font-size:13px;color:var(--muted);margin:0 0 23px}.event{position:relative;padding:0 0 23px 25px;border-left:1px solid #d8e3f4;margin-left:7px}.event:before{content:'';position:absolute;left:-4px;top:9px;border-radius:50%;width:7px;height:7px;background:#81a4ee}.event small{display:block;color:var(--muted);font-size:12px}.event strong{font-weight:600;font-size:15px}.event p{font-size:16px;margin:5px 0 0;line-height:1.5}.event:last-of-type{padding-bottom:0}.taskside{padding:30px}.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}.tab{background:transparent;border:1px solid var(--line);padding:7px 12px;border-radius:7px;color:#64738b;font-size:13px}.tab[aria-selected=true]{background:var(--blue);color:white;border-color:var(--blue)}.task-family{font-size:13px;color:var(--teal);margin:0 0 8px}.task-q{font-size:22px;line-height:1.45;margin:0 0 17px;font-weight:600}.options{display:grid;gap:8px;font-size:15px;color:#53667d}.option{display:flex;gap:10px}.option span:first-child{color:var(--blue);font-weight:600}.evaluation{margin-top:24px;padding-top:18px;border-top:1px solid #e7edf6}.evaluation summary{color:var(--blue);font-size:14px;cursor:pointer}.evaluation p{font-size:15px;color:#556780;margin:12px 0 0;line-height:1.6}.example-note{font-size:13px;color:var(--muted);margin:13px 0 0}.result-row{display:flex;align-items:start;justify-content:space-between;gap:30px}.result-row .prose{max-width:760px}.group-label{color:var(--teal);font-weight:600}.results-list{display:grid;gap:16px;max-width:800px;margin:26px 0}.results-list p{margin:0}.results-list b{font-weight:600}.table-figure{margin-top:34px}.split-section{display:grid;grid-template-columns:1fr 1fr;gap:58px;margin-top:45px}.split-section p{color:#5d6e85;font-size:16px}.full-image{grid-column:1/-1}.resources{display:grid;grid-template-columns:1fr 1fr;gap:65px}.resources p{color:#5d6e85}.links{display:grid;gap:13px}.resource-link{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding:12px 0;font-size:19px}.resource-link span:last-child{font-size:13px;color:var(--muted)}.resource-link:hover{text-decoration:none;color:#1546cb}.citation{margin-top:35px;background:#f4f7fc;border-radius:10px;padding:22px}.citation-top{display:flex;justify-content:space-between;align-items:center}.citation h3{font-size:19px;margin:0}.copy{border:1px solid var(--line);background:white;border-radius:7px;font-size:13px;padding:6px 13px;color:#50617b}.citation pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px;line-height:1.7;margin:18px 0 0;color:#556880;font-family:ui-monospace,SFMono-Regular,monospace}.cite-status{font-size:12px;color:var(--muted);margin:13px 0 0}.footer{padding:35px 0 46px;background:#f7faff;border-top:1px solid var(--line);font-size:14px;color:#6a7890}.footer .wrap{display:flex;justify-content:space-between;gap:24px}.footer a{color:#4c638c}.lightbox{padding:0;border:0;border-radius:12px;width:min(95vw,1500px);max-width:95vw;max-height:92vh;background:white;box-shadow:0 20px 100px #0005}.lightbox::backdrop{background:#142442cc}.lightbox .inner{padding:48px 20px 20px;overflow:auto;max-height:92vh}.lightbox img{width:100%;height:auto}.close{position:absolute;right:12px;top:10px;border:0;border-radius:20px;background:#edf3ff;color:#173b70;width:33px;height:33px;font-size:22px;line-height:1}.reduced{}@media(max-width:850px){.hero{padding-top:48px}.hero h1{letter-spacing:-.8px}.intro-layout,.resources,.split-section{grid-template-columns:1fr;gap:27px}.section{padding:56px 0}.evidence>div{padding:8px 13px}.evidence strong{font-size:38px}.method-line{gap:20px}.navlinks{gap:18px}.example{grid-template-columns:1fr}.history{border-right:0;border-bottom:1px solid var(--line)}.history,.taskside{padding:25px}.event{padding-bottom:16px}}@media(max-width:540px){body{font-size:16px}.wrap{padding:0 22px}.navlinks a:not(:last-child){display:none}.hero{padding:45px 20px 35px}.hero-logo{font-size:96px}.hero .deck{font-size:18px}.hero h1{font-size:29px}.hero h1 span{display:inline}.lightbox img{width:1000px;max-width:none}.actions{gap:8px}.action{padding:7px 16px;font-size:14px}.evidence{margin-top:38px}.evidence strong{font-size:31px}.evidence>div{padding:5px 7px}.evidence span{font-size:12px}h2{font-size:29px}.method-line{display:block}.method-line>div{margin:20px 0}.task-q{font-size:20px}.tab{padding:6px 8px;font-size:12px}.footer .wrap{display:block}.footer p{margin:5px 0}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -45,9 +176,9 @@ main>.section:nth-child(2n+2){background:#f8faff}
 
 <section class="section"><div class="wrap"><div class="prose"><h2>More behavior data, stronger LLM capabilities</h2><p>Increasing Vela-Instruct from <strong>4.7K to 75K examples</strong> raises VelaBench scores from <strong>59.2 to 63.0</strong> and the independent user-related average from <strong>43.5 to 47.5</strong>. General benchmarks remain above the base model at every tested scale.</p></div><figure class="figure"><button class="image-button" data-zoom="assets/scaling_tiers.png" aria-label="Enlarge data scaling results"><img src="assets/scaling_tiers.png" alt="Scores at five training scales on VelaBench, user-related and general benchmarks" loading="lazy"></button><figcaption>Different capabilities respond differently to scale. VelaBench continues improving from 37.5K to 75K.</figcaption></figure></div></section>
 <section class="section"><div class="wrap"><div class="prose"><h2>A better foundation for RL</h2><p>With the same reinforcement-learning data and settings, first training on Vela-Instruct leads to better final results than applying RL directly to the base model.</p><p>After RL, Vela-based models reach <strong>66.2 on VelaBench</strong> and <strong>37.6 on ProfileSummary</strong>, compared with <strong>58.5</strong> and <strong>29.9</strong>. Both gains are <strong>7.7 points</strong>.</p></div><figure class="figure"><button class="image-button" data-zoom="assets/rl_two_panel.png" aria-label="Enlarge reinforcement learning results"><img src="assets/rl_two_panel.png" alt="Performance before and after RL, starting from the base model or Vela" loading="lazy"></button><figcaption>These experiments use the Vela checkpoint trained on 18.8K examples. The comparison is between both models after RL.</figcaption></figure></div></section>
-<section class="section" id="resources"><div class="wrap"><div class="resources"><div><h2>Explore Vela</h2><p>The repository includes <strong>74 selected task templates</strong> and the paper’s Composer and Scorer system prompts in English and Chinese. Browse the evidence boundaries, question instructions, and scoring criteria for each task.</p><p>Questions about the project?<br><a href="mailto:yang-alan.xiao@connect.polyu.hk">yang-alan.xiao@connect.polyu.hk</a></p></div><div class="links"><a class="resource-link" href="https://github.com/AllSpark-Research/Vela/blob/main/Vela.pdf" target="_blank" rel="noopener"><span>Paper PDF</span><span>Read the research</span></a><a class="resource-link" href="https://github.com/AllSpark-Research/Vela" target="_blank" rel="noopener"><span>GitHub repository</span><span>Project resources</span></a><a class="resource-link" href="https://github.com/AllSpark-Research/Vela/tree/main/templates" target="_blank" rel="noopener"><span>Task templates</span><span>74 selected templates</span></a><a class="resource-link" href="https://github.com/AllSpark-Research/Vela/tree/main/prompts" target="_blank" rel="noopener"><span>System prompts</span><span>Composer &amp; Scorer</span></a></div></div><section class="author-section" aria-labelledby="authors-title"><h2 id="authors-title">Authors</h2><p class="author-team">AllSpark Team</p><p class="author-names">Yang Xiao*, Yusong Sun*, Haoyi Wu, Wenyang Hui, Hang Weiqiang, Luqing Wang, Wang Zejian, Zirui Tu, Maojingsheng, Shaobo Hu, Yang Luo, Jiale Guo, Jin Zhang, Yudan Liu, Zhaokai Luo, Ren Huan, Yao Hu, Chengyue Jiang†, Wenjie Li, Chuan Mu</p><p class="author-notes">* Equal contribution. † Project lead.</p></section><div class="citation"><div class="citation-top"><h3>Citation</h3><button class="copy" id="copy-citation">Copy citation</button></div><pre id="citation-text">@misc{vela2026,
+<section class="section" id="resources"><div class="wrap"><div class="resources"><div><h2>Explore Vela</h2><p>The repository includes <strong>74 selected task templates</strong> and the paper’s Composer and Scorer system prompts in English and Chinese. Browse the evidence boundaries, question instructions, and scoring criteria for each task.</p><p>Questions about the project?<br><a href="mailto:yang-alan.xiao@connect.polyu.hk">yang-alan.xiao@connect.polyu.hk</a></p></div><div class="links"><a class="resource-link" href="https://www.alphaxiv.org/abs/2610.vela-user-behavior-supervision" target="_blank" rel="noopener"><span>alphaXiv</span><span>Paper &amp; discussion</span></a><a class="resource-link" href="paper.html"><span>Paper abstract</span><span>Authors &amp; full text</span></a><a class="resource-link" href="https://github.com/AllSpark-Research/Vela/blob/main/Vela.pdf" target="_blank" rel="noopener"><span>Paper PDF</span><span>Read the research</span></a><a class="resource-link" href="https://github.com/AllSpark-Research/Vela" target="_blank" rel="noopener"><span>GitHub repository</span><span>Project resources</span></a><a class="resource-link" href="https://github.com/AllSpark-Research/Vela/tree/main/templates" target="_blank" rel="noopener"><span>Task templates</span><span>74 selected templates</span></a><a class="resource-link" href="https://github.com/AllSpark-Research/Vela/tree/main/prompts" target="_blank" rel="noopener"><span>System prompts</span><span>Composer &amp; Scorer</span></a></div></div><section class="author-section" aria-labelledby="authors-title"><h2 id="authors-title">Authors</h2><p class="author-team">AllSpark Team</p><p class="author-names">Yang Xiao*, Yusong Sun*, Haoyi Wu, Wenyang Hui, Weiqiang Hang, Luqing Wang, Zejian Wang, Zirui Tu, Jingsheng Mao, Shaobo Hu, Yang Luo, Jiale Guo, Jin Zhang, Yudan Liu, Zhaokai Luo, Ren Huan, Yao Hu, Chengyue Jiang†, Wenjie Li, Chuan Mu</p><p class="author-notes">* Equal contribution. † Project lead.</p></section><div class="citation"><div class="citation-top"><h3>Citation</h3><button class="copy" id="copy-citation">Copy citation</button></div><pre id="citation-text">@misc{vela2026,
   title = {Vela: User Behavior as Supervision Sparks LLM Intelligence},
-  author = {{AllSpark Team}},
+  author = {Yang Xiao and Yusong Sun and Haoyi Wu and Wenyang Hui and Weiqiang Hang and Luqing Wang and Zejian Wang and Zirui Tu and Jingsheng Mao and Shaobo Hu and Yang Luo and Jiale Guo and Jin Zhang and Yudan Liu and Zhaokai Luo and Ren Huan and Yao Hu and Chengyue Jiang and Wenjie Li and Chuan Mu},
   year = {2026},
   url = {https://github.com/AllSpark-Research/Vela}
 }</pre><p class="cite-status">Project citation. An arXiv identifier can be added when available.</p></div></div></section>

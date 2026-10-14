@@ -8,6 +8,8 @@
   </p>
 </div>
 
+**Official repository for [Vela: User Behavior as Supervision Sparks LLM Intelligence](https://www.alphaxiv.org/abs/2610.vela-user-behavior-supervision), from AllSpark at Xiaohongshu.**
+
 Vela explores **user behavior as supervision**: learning from anonymized records of what users actually do to improve how large language models understand individual preferences, intent, and behavior over time.
 
 The Vela framework turns anonymized real-world behavior histories into training tasks and trajectories. Its tasks ask models to predict future behavior, summarize interests, and explain observed outcomes using evidence from a user's history. Experiments show gains in both user-related and general capabilities, alongside a stronger foundation for subsequent reinforcement learning.

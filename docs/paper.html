@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vela: User Behavior as Supervision Sparks LLM Intelligence | Paper &amp; GitHub</title>
+<meta name="description" content="Official Vela research from AllSpark at Xiaohongshu: learning from anonymized user behavior to improve LLM intelligence. Paper, task templates, and prompts.">
+<link rel="canonical" href="https://allspark-research.github.io/Vela/paper.html">
+<link rel="icon" href="assets/allspark-mark.svg" type="image/svg+xml">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="citation_title" content="Vela: User Behavior as Supervision Sparks LLM Intelligence">
+<meta name="citation_author" content="Yang Xiao">
+<meta name="citation_author" content="Yusong Sun">
+<meta name="citation_author" content="Haoyi Wu">
+<meta name="citation_author" content="Wenyang Hui">
+<meta name="citation_author" content="Weiqiang Hang">
+<meta name="citation_author" content="Luqing Wang">
+<meta name="citation_author" content="Zejian Wang">
+<meta name="citation_author" content="Zirui Tu">
+<meta name="citation_author" content="Jingsheng Mao">
+<meta name="citation_author" content="Shaobo Hu">
+<meta name="citation_author" content="Yang Luo">
+<meta name="citation_author" content="Jiale Guo">
+<meta name="citation_author" content="Jin Zhang">
+<meta name="citation_author" content="Yudan Liu">
+<meta name="citation_author" content="Zhaokai Luo">
+<meta name="citation_author" content="Ren Huan">
+<meta name="citation_author" content="Yao Hu">
+<meta name="citation_author" content="Chengyue Jiang">
+<meta name="citation_author" content="Wenjie Li">
+<meta name="citation_author" content="Chuan Mu">
+<meta name="citation_publication_date" content="2026">
+<meta name="citation_pdf_url" content="https://allspark-research.github.io/Vela/assets/Vela.pdf">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": "Vela: User Behavior as Supervision Sparks LLM Intelligence",
+  "name": "Vela: User Behavior as Supervision Sparks LLM Intelligence",
+  "url": "https://allspark-research.github.io/Vela/paper.html",
+  "description": "Large language models are increasingly deployed in real-world applications, from personal assistants that take actions based on users' long-term behavior histories to recommendation and advertising systems that predict what users will do. These applications demand the user dimension of LLM intelligence: the ability to infer a person's preferences, intent, and likely future actions from weeks to years of user behavior data. Yet current models remain limited in this user dimension of intelligence: they are trained on static text or synthetic data, neither of which captures how user behavior evolves over time. Real-world user behavior data, by contrast, is already available at scale on content platforms and in personal-assistant agents. These records capture sequences of user actions, making the user's actual behavior a natural supervisory signal with the potential to improve LLM intelligence. To this end, we propose user behavior as supervision, a paradigm in which the training signal for LLMs comes from the user's real behavior in content platforms. We further introduce Vela, a framework that operationalizes this paradigm by converting real user behavior data into trainable tasks and trajectories. From the anonymized behavior records of 100,000 users, Vela generates 100,000 tasks across 91 real-world task templates. Difficulty-based filtering and trajectory acceptance criteria jointly retain approximately 75,000 tasks with selected training trajectories. Fine-tuning Qwen3.6-35B-A3B on these training trajectories improves performance over the base model by up to 11.5 points on user-related tasks and by an average of 4 points on general benchmarks. Scaling experiments further show that training on more user behavior data improves user-related performance. Reinforcement learning after fine-tuning outperforms reinforcement learning from the base model by up to 7.7 points on user-related tasks. These gains suggest that using real-world user behavior as supervision can improve not only user-centered capabilities but also the broader intelligence of LLMs.",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yang Xiao"
+    },
+    {
+      "@type": "Person",
+      "name": "Yusong Sun"
+    },
+    {
+      "@type": "Person",
+      "name": "Haoyi Wu"
+    },
+    {
+      "@type": "Person",
+      "name": "Wenyang Hui"
+    },
+    {
+      "@type": "Person",
+      "name": "Weiqiang Hang"
+    },
+    {
+      "@type": "Person",
+      "name": "Luqing Wang"
+    },
+    {
+      "@type": "Person",
+      "name": "Zejian Wang"
+    },
+    {
+      "@type": "Person",
+      "name": "Zirui Tu"
+    },
+    {
+      "@type": "Person",
+      "name": "Jingsheng Mao"
+    },
+    {
+      "@type": "Person",
+      "name": "Shaobo Hu"
+    },
+    {
+      "@type": "Person",
+      "name": "Yang Luo"
+    },
+    {
+      "@type": "Person",
+      "name": "Jiale Guo"
+    },
+    {
+      "@type": "Person",
+      "name": "Jin Zhang"
+    },
+    {
+      "@type": "Person",
+      "name": "Yudan Liu"
+    },
+    {
+      "@type": "Person",
+      "name": "Zhaokai Luo"
+    },
+    {
+      "@type": "Person",
+      "name": "Ren Huan"
+    },
+    {
+      "@type": "Person",
+      "name": "Yao Hu"
+    },
+    {
+      "@type": "Person",
+      "name": "Chengyue Jiang"
+    },
+    {
+      "@type": "Person",
+      "name": "Wenjie Li"
+    },
+    {
+      "@type": "Person",
+      "name": "Chuan Mu"
+    }
+  ],
+  "isAccessibleForFree": true,
+  "inLanguage": "en",
+  "sameAs": [
+    "https://www.alphaxiv.org/abs/2610.vela-user-behavior-supervision",
+    "https://github.com/AllSpark-Research/Vela"
+  ],
+  "encoding": {
+    "@type": "MediaObject",
+    "contentUrl": "https://allspark-research.github.io/Vela/assets/Vela.pdf",
+    "encodingFormat": "application/pdf"
+  }
+}
+</script>
+<style>body{margin:0;background:#f7faff;color:#152a49;font-family:system-ui,sans-serif;line-height:1.7}main{max-width:920px;margin:0 auto;padding:48px 24px 64px}h1{font-size:clamp(28px,4vw,40px);line-height:1.2;letter-spacing:-.8px}h2{font-size:24px}.authors{color:#52647d}a{color:#285eee;text-underline-offset:3px}.links{display:flex;gap:24px;flex-wrap:wrap;margin:24px 0}.privacy{border-left:3px solid #285eee;padding:12px 18px;background:#edf3ff;font-size:14px}.abstract{font-size:17px}footer{margin-top:32px;font-size:14px;color:#52647d}</style></head>
+<body><main><a href="./">Vela · AllSpark Research</a>
+<h1>Vela: User Behavior as Supervision Sparks LLM Intelligence</h1>
+<p class="authors">Yang Xiao, Yusong Sun, Haoyi Wu, Wenyang Hui, Weiqiang Hang, Luqing Wang, Zejian Wang, Zirui Tu, Jingsheng Mao, Shaobo Hu, Yang Luo, Jiale Guo, Jin Zhang, Yudan Liu, Zhaokai Luo, Ren Huan, Yao Hu, Chengyue Jiang, Wenjie Li, Chuan Mu</p>
+<p>2026 · AllSpark at Xiaohongshu</p>
+<div class="links"><a href="assets/Vela.pdf">Full-text PDF</a><a href="https://www.alphaxiv.org/abs/2610.vela-user-behavior-supervision">alphaXiv</a><a href="https://github.com/AllSpark-Research/Vela">Official GitHub repository</a><a href="./">Project page</a></div>
+<p class="privacy"><strong>Privacy statement.</strong> Behavior records were anonymized before task construction. Their use was authorized by the platform and underwent privacy and ethics review.</p>
+<h2>Abstract</h2><p class="abstract">Large language models are increasingly deployed in real-world applications, from personal assistants that take actions based on users&#x27; long-term behavior histories to recommendation and advertising systems that predict what users will do. These applications demand the user dimension of LLM intelligence: the ability to infer a person&#x27;s preferences, intent, and likely future actions from weeks to years of user behavior data. Yet current models remain limited in this user dimension of intelligence: they are trained on static text or synthetic data, neither of which captures how user behavior evolves over time. Real-world user behavior data, by contrast, is already available at scale on content platforms and in personal-assistant agents. These records capture sequences of user actions, making the user&#x27;s actual behavior a natural supervisory signal with the potential to improve LLM intelligence. To this end, we propose user behavior as supervision, a paradigm in which the training signal for LLMs comes from the user&#x27;s real behavior in content platforms. We further introduce Vela, a framework that operationalizes this paradigm by converting real user behavior data into trainable tasks and trajectories. From the anonymized behavior records of 100,000 users, Vela generates 100,000 tasks across 91 real-world task templates. Difficulty-based filtering and trajectory acceptance criteria jointly retain approximately 75,000 tasks with selected training trajectories. Fine-tuning Qwen3.6-35B-A3B on these training trajectories improves performance over the base model by up to 11.5 points on user-related tasks and by an average of 4 points on general benchmarks. Scaling experiments further show that training on more user behavior data improves user-related performance. Reinforcement learning after fine-tuning outperforms reinforcement learning from the base model by up to 7.7 points on user-related tasks. These gains suggest that using real-world user behavior as supervision can improve not only user-centered capabilities but also the broader intelligence of LLMs.</p>
+<footer>Public resources: paper, 74 selected task templates, and English/Chinese Composer and Scorer prompts. <a href="https://github.com/AllSpark-Research/Vela">Explore Vela on GitHub</a>.</footer>
+</main></body></html>
