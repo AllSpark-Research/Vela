@@ -4,11 +4,12 @@
     <a href="https://allspark-research.github.io/Vela/"><img src="assets/badges/website.svg" alt="Project page" /></a>
     <a href="Vela.pdf"><img src="assets/badges/paper.svg" alt="Paper PDF" /></a>
     <a href="https://github.com/AllSpark-Research/Vela"><img src="assets/badges/github.svg" alt="GitHub repository" /></a>
+    <a href="https://arxiv.org/abs/2610.14709"><img src="assets/badges/arxiv-paper.svg" alt="arXiv: 2610.14709" /></a>
     <a href="https://www.alphaxiv.org/abs/2610.vela-user-behavior-supervision"><img src="assets/badges/alphaxiv.svg" alt="Read the paper on alphaXiv" /></a>
   </p>
 </div>
 
-**Official repository for [Vela: User Behavior as Supervision Sparks LLM Intelligence](https://www.alphaxiv.org/abs/2610.vela-user-behavior-supervision), from AllSpark at Xiaohongshu.**
+**Official repository for [Vela: User Behavior as Supervision Sparks LLM Intelligence](https://arxiv.org/abs/2610.14709), from AllSpark at Xiaohongshu.**
 
 Vela explores **user behavior as supervision**: learning from anonymized records of what users actually do to improve how large language models understand individual preferences, intent, and behavior over time.
 
@@ -108,6 +109,20 @@ The system prompts from the paper appendix are available in English and Chinese:
 The Composer expects a selected template, visible history, and a response schema. Attribution tasks also supply the observed outcome to disclose in the question. The Scorer expects the task, its scoring specification, the evaluated model's response, and an output schema.
 
 These prompts describe the paper's evaluation protocol: semantic normalization followed by set-F1 for Open-prediction, and equal-weight rubric criteria for Open and Attribution. When adapting templates with configurable scoring parameters, keep the task specification and scorer consistent with the protocol you choose. An execution program must supply the inputs, validate the returned JSON, and compute the rule-based metrics.
+
+## Citation
+
+```bibtex
+@misc{xiao2026velauserbehaviorsupervision,
+  title = {Vela: User Behavior as Supervision Sparks LLM Intelligence},
+  author = {Yang Xiao and Yusong Sun and Haoyi Wu and Wenyang Hui and Weiqiang Hang and Luqing Wang and Zejian Wang and Zirui Tu and Jingsheng Mao and Shaobo Hu and Yang Luo and Jiale Guo and Jin Zhang and Yudan Liu and Zhaokai Luo and Ren Huan and Yao Hu and Chengyue Jiang and Wenjie Li and Chuan Mu},
+  year = {2026},
+  eprint = {2610.14709},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CL},
+  url = {https://arxiv.org/abs/2610.14709}
+}
+```
 
 ## Contact
 
