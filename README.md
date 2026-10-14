@@ -4,7 +4,7 @@
     <a href="https://allspark-research.github.io/Vela/"><img src="assets/badges/website.svg" alt="Project page" /></a>
     <a href="Vela.pdf"><img src="assets/badges/paper.svg" alt="Paper PDF" /></a>
     <a href="https://github.com/AllSpark-Research/Vela"><img src="assets/badges/github.svg" alt="GitHub repository" /></a>
-    <img src="assets/badges/arxiv.svg" alt="arXiv: coming soon" title="arXiv link coming soon" />
+    <a href="https://www.alphaxiv.org/abs/2610.vela-user-behavior-supervision"><img src="assets/badges/alphaxiv.svg" alt="Read the paper on alphaXiv" /></a>
   </p>
 </div>
 
